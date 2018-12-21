@@ -21,4 +21,10 @@ struct Exercise {
     let name: String
     let type: String // type will be weight/cardio/body-weight
     let muscleGroup: MuscleGroup
+    
+    init(name: String, type: String, muscleGroup: MuscleGroup) {
+        self.name = name
+        self.type = type
+        self.muscleGroup = muscleGroup
+    }
 }

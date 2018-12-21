@@ -16,6 +16,8 @@ class WorkoutSelectorVC: UIViewController, UITableViewDelegate, UITableViewDataS
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Make GET to Firebase to get list of workouts to start
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -8,7 +8,17 @@
 
 import Foundation
 
-struct Workout {
+struct Workout: FirebaseFormatter {
     let name: String
-    let exercises: [Exercise]
+    let exercises: [Exercise]?
+    
+    init(name: String, exercises: [Exercise]?) {
+        self.name = name
+        self.exercises = exercises
+    }
+    
+    func firebaseFormat() -> [String: Any] {
+        let dict = ["name": self.name, "exercises": ["exercise 1", "exercise 2"]] as [String : Any]
+        return dict
+    }
 }

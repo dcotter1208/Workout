@@ -9,12 +9,18 @@
 import Foundation
 import FirebaseDatabase
 
+protocol FirebaseFormatter {
+    func firebaseFormat() -> [String: Any]
+}
+
 struct FirebaseOperation {
+    
     private let databaseRef = Database.database().reference()
     
-    func write(value: [String: Any], to child:String) {
+    func write(value: FirebaseFormatter, to child:String) {
+        let firebaseValue = value.firebaseFormat()
         let childRef = databaseRef.child(child).childByAutoId()
-        childRef.setValue(value)
+        childRef.setValue(firebaseValue)
     }
     
 }
