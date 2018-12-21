@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B117A5745E6FA8F3D4857D69 /* Pods_Workout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 533FE1696F5B31C35A179987 /* Pods_Workout.framework */; };
 		C03D71AB21CD362400863A6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03D71AA21CD362400863A6F /* AppDelegate.swift */; };
 		C03D71AD21CD362400863A6F /* WorkoutSelectorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03D71AC21CD362400863A6F /* WorkoutSelectorVC.swift */; };
 		C03D71B021CD362400863A6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C03D71AE21CD362400863A6F /* Main.storyboard */; };
 		C03D71B221CD362500863A6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C03D71B121CD362500863A6F /* Assets.xcassets */; };
 		C03D71B521CD362500863A6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C03D71B321CD362500863A6F /* LaunchScreen.storyboard */; };
+		C03D71BD21CD3C8E00863A6F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C03D71BC21CD3C8E00863A6F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		503A8A1CE535D7F44BBCB594 /* Pods-Workout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Workout/Pods-Workout.debug.xcconfig"; sourceTree = "<group>"; };
+		533FE1696F5B31C35A179987 /* Pods_Workout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Workout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D13FD247B40BC0FF0757736 /* Pods-Workout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workout.release.xcconfig"; path = "Pods/Target Support Files/Pods-Workout/Pods-Workout.release.xcconfig"; sourceTree = "<group>"; };
 		C03D71A721CD362400863A6F /* Workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Workout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C03D71AA21CD362400863A6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C03D71AC21CD362400863A6F /* WorkoutSelectorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSelectorVC.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		C03D71B121CD362500863A6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C03D71B421CD362500863A6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C03D71B621CD362500863A6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C03D71BC21CD3C8E00863A6F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B117A5745E6FA8F3D4857D69 /* Pods_Workout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58083FFE24A3DFE16D78FCA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				533FE1696F5B31C35A179987 /* Pods_Workout.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		692C2A26DEC276C0DE55BA64 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				503A8A1CE535D7F44BBCB594 /* Pods-Workout.debug.xcconfig */,
+				5D13FD247B40BC0FF0757736 /* Pods-Workout.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C03D719E21CD362300863A6F = {
 			isa = PBXGroup;
 			children = (
 				C03D71A921CD362400863A6F /* Workout */,
 				C03D71A821CD362400863A6F /* Products */,
+				692C2A26DEC276C0DE55BA64 /* Pods */,
+				58083FFE24A3DFE16D78FCA3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +86,7 @@
 				C03D71B121CD362500863A6F /* Assets.xcassets */,
 				C03D71B321CD362500863A6F /* LaunchScreen.storyboard */,
 				C03D71B621CD362500863A6F /* Info.plist */,
+				C03D71BC21CD3C8E00863A6F /* GoogleService-Info.plist */,
 			);
 			path = Workout;
 			sourceTree = "<group>";
@@ -71,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C03D71B921CD362500863A6F /* Build configuration list for PBXNativeTarget "Workout" */;
 			buildPhases = (
+				E267AA9A6A88306E9013C72A /* [CP] Check Pods Manifest.lock */,
 				C03D71A321CD362400863A6F /* Sources */,
 				C03D71A421CD362400863A6F /* Frameworks */,
 				C03D71A521CD362400863A6F /* Resources */,
+				4AB377AB9E1083EAD2D3DFA2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,12 +152,54 @@
 			buildActionMask = 2147483647;
 			files = (
 				C03D71B521CD362500863A6F /* LaunchScreen.storyboard in Resources */,
+				C03D71BD21CD3C8E00863A6F /* GoogleService-Info.plist in Resources */,
 				C03D71B221CD362500863A6F /* Assets.xcassets in Resources */,
 				C03D71B021CD362400863A6F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4AB377AB9E1083EAD2D3DFA2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Workout/Pods-Workout-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Workout/Pods-Workout-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E267AA9A6A88306E9013C72A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Workout-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C03D71A321CD362400863A6F /* Sources */ = {
@@ -280,6 +351,7 @@
 		};
 		C03D71BA21CD362500863A6F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 503A8A1CE535D7F44BBCB594 /* Pods-Workout.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +370,7 @@
 		};
 		C03D71BB21CD362500863A6F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D13FD247B40BC0FF0757736 /* Pods-Workout.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
