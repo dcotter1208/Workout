@@ -14,6 +14,11 @@
 		C03D71B221CD362500863A6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C03D71B121CD362500863A6F /* Assets.xcassets */; };
 		C03D71B521CD362500863A6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C03D71B321CD362500863A6F /* LaunchScreen.storyboard */; };
 		C03D71BD21CD3C8E00863A6F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C03D71BC21CD3C8E00863A6F /* GoogleService-Info.plist */; };
+		C03D71C121CD471B00863A6F /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03D71C021CD471B00863A6F /* Workout.swift */; };
+		C03D71C421CD493A00863A6F /* FirebaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03D71C321CD493A00863A6F /* FirebaseOperation.swift */; };
+		C03D71C621CD4A9A00863A6F /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03D71C521CD4A9A00863A6F /* Exercise.swift */; };
+		C03D71C821CD4DCA00863A6F /* WorkoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03D71C721CD4DCA00863A6F /* WorkoutVC.swift */; };
+		C03D71CC21CD57B600863A6F /* ExerciseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03D71CB21CD57B600863A6F /* ExerciseVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		C03D71B421CD362500863A6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C03D71B621CD362500863A6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C03D71BC21CD3C8E00863A6F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C03D71C021CD471B00863A6F /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		C03D71C321CD493A00863A6F /* FirebaseOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseOperation.swift; sourceTree = "<group>"; };
+		C03D71C521CD4A9A00863A6F /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		C03D71C721CD4DCA00863A6F /* WorkoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutVC.swift; sourceTree = "<group>"; };
+		C03D71CB21CD57B600863A6F /* ExerciseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				C03D71A921CD362400863A6F /* Workout */,
+				C03D71C221CD48FB00863A6F /* FirebaseOperations */,
 				C03D71A821CD362400863A6F /* Products */,
 				692C2A26DEC276C0DE55BA64 /* Pods */,
 				58083FFE24A3DFE16D78FCA3 /* Frameworks */,
@@ -81,7 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				C03D71AA21CD362400863A6F /* AppDelegate.swift */,
-				C03D71AC21CD362400863A6F /* WorkoutSelectorVC.swift */,
+				C03D71BE21CD46BE00863A6F /* Controllers */,
+				C03D71BF21CD470300863A6F /* Models */,
 				C03D71AE21CD362400863A6F /* Main.storyboard */,
 				C03D71B121CD362500863A6F /* Assets.xcassets */,
 				C03D71B321CD362500863A6F /* LaunchScreen.storyboard */,
@@ -89,6 +101,33 @@
 				C03D71BC21CD3C8E00863A6F /* GoogleService-Info.plist */,
 			);
 			path = Workout;
+			sourceTree = "<group>";
+		};
+		C03D71BE21CD46BE00863A6F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C03D71AC21CD362400863A6F /* WorkoutSelectorVC.swift */,
+				C03D71C721CD4DCA00863A6F /* WorkoutVC.swift */,
+				C03D71CB21CD57B600863A6F /* ExerciseVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C03D71BF21CD470300863A6F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C03D71C021CD471B00863A6F /* Workout.swift */,
+				C03D71C521CD4A9A00863A6F /* Exercise.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C03D71C221CD48FB00863A6F /* FirebaseOperations */ = {
+			isa = PBXGroup;
+			children = (
+				C03D71C321CD493A00863A6F /* FirebaseOperation.swift */,
+			);
+			path = FirebaseOperations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,11 +208,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Workout/Pods-Workout-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,8 +247,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C03D71C621CD4A9A00863A6F /* Exercise.swift in Sources */,
+				C03D71C421CD493A00863A6F /* FirebaseOperation.swift in Sources */,
+				C03D71CC21CD57B600863A6F /* ExerciseVC.swift in Sources */,
 				C03D71AD21CD362400863A6F /* WorkoutSelectorVC.swift in Sources */,
 				C03D71AB21CD362400863A6F /* AppDelegate.swift in Sources */,
+				C03D71C121CD471B00863A6F /* Workout.swift in Sources */,
+				C03D71C821CD4DCA00863A6F /* WorkoutVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

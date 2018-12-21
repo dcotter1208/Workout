@@ -1,5 +1,5 @@
 //
-//  WorkoutSelectorVC.swift
+//  ExerciseVC.swift
 //  Workout
 //
 //  Created by Donovan Cotter on 12/21/18.
@@ -8,14 +8,10 @@
 
 import UIKit
 
-class WorkoutSelectorVC: UIViewController {
-    @IBOutlet weak var tableView: UITableView!
-    
+class ExerciseVC: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    }
-    
-    
-}
 
+    }    
+}

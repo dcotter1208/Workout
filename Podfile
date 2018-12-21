@@ -7,6 +7,6 @@ target 'Workout' do
 
   # Pods for Workout
   pod 'Firebase/Core'
-
+  pod 'Firebase/Database'
 
 end
